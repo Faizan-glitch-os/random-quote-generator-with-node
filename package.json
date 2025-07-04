@@ -1,0 +1,16 @@
+{
+  "name": "random-qoute-generator",
+  "version": "1.0.0",
+  "description": "will send random quotes to the client",
+  "license": "ISC",
+  "author": "Faizan Ahmad",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}
