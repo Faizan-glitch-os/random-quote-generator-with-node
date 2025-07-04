@@ -1,14 +1,17 @@
 const fs = require("fs");
+const cors = require("cors");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
 
 app.use(morgan("dev"));
 
+app.use(cors());
+
 const quotes = JSON.parse(fs.readFileSync("./quotes.json", "utf-8"));
 
 app.get("/api/v1/random-quote", (req, res) => {
-  const quotesLength = quotes.quotes.length;
+  const quotesLength = quotes.quotes.length - 1;
   const randomIndex = Math.floor(Math.random() * quotesLength);
   console.log(randomIndex);
 
